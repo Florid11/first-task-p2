@@ -1,10 +1,10 @@
 import React from "react";
-import tabs from "./tabsNavigation/Tabs";
+import {tabsComponent} from "./tabsNavigation/Tabs.js";
 
 function App() {
   return (
     <div className="App">
-      <tabs />
+      <tabsComponent />
     </div>
   );
 }
