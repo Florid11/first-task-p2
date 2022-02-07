@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./Cards.module.css";
-import Tabs from "../tabsNavigation/Tabs";
+
 
 const cards = () => {
 
