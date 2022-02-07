@@ -1,5 +1,5 @@
 import React from "react";
-import {tabsComponent} from "./tabsNavigation/Tabs.js";
+import tabsComponent from "./tabsNavigation/Tabs";
 
 function App() {
   return (
