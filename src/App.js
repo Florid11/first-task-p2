@@ -4,7 +4,7 @@ import tabsComponent from "./tabsNavigation/Tabs";
 function App() {
   return (
     <div className="App">
-      <tabsComponent />
+        {tabsComponent()}
     </div>
   );
 }
