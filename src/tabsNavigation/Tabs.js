@@ -7,3 +7,5 @@ const tabs = () => {
       </div>
   );
 }
+
+export default tabs;
