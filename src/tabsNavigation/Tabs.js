@@ -1,11 +1,14 @@
 import React from "react";
+import classes from "./Tabs.module.css";
 
-const tabs = () => {
+const tabsComponent = () => {
   return(
-      <div>
-          <h1>Hello</h1>
+      <div className={classes.box}>
+          <div>
+              <h1>Hello I am Learning React</h1>
+          </div>
       </div>
   );
 }
 
-export default tabs;
+export default tabsComponent;
