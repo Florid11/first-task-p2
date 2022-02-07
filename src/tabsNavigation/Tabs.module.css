@@ -1,4 +1,39 @@
 .box{
-    background-color: #fff;
-    color: #555;
+    color: black;
 }
+
+.tab_btn{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+     margin: 15px 0;
+    font-size: 17px;
+}
+
+.tab_click:disabled{
+    color: gray;
+}
+
+.tab_click{
+    border: 1px solid transparent;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.tab_click:hover{
+    border-bottom: 2px solid #1DA1F2;
+}
+
+.tab_click:focus:after{
+    border-bottom: 2px solid #1DA1F2;
+}
+
+
+
+
+
+
+
+
