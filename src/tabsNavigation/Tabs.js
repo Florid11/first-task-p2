@@ -1,9 +1,10 @@
 import React from "react";
 import classes from "./Tabs.module.css";
 import {Tab,Tabs,TabList,TabPanel} from "react-tabs";
+import cards from "../components/Cards"
 
 const tabsComponent = () => {
-
+    const cardsData = cards();
   return(
       <div className={classes.box}>
           <div className={classes.tab}>
@@ -19,7 +20,7 @@ const tabsComponent = () => {
                       <Tab disabled className={classes.tab_click}>Free Hosting</Tab>
                   </TabList>
                   <TabPanel className={classes.panel}>
-                      <p>Hello there</p>
+                      {cardsData}
                   </TabPanel>
               </Tabs>
           </div>
