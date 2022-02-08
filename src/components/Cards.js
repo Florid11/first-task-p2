@@ -60,14 +60,14 @@ const cards = () => {
           {cardData.map((data) =>{
               return(
                   <div className={classes.dataBox}>
-                      <div>
+                      <div className={classes.block}>
                           <h1>{data.name}</h1>
                       </div>
-                      <div>
+                      <div className={classes.block}>
                         <h3>{data.price}</h3>
                           <p>{data.description}</p>
                       </div>
-                      <div>
+                      <div className={classes.btn}>
                         <button className={classes.dwn_btn}>Buy Now</button>
                       </div>
                   </div>

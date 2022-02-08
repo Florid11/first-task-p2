@@ -1,3 +1,57 @@
 .cardBox{
+    width: 98%;
+}
+
+.cardBox div{
+    background-color: #fff;
+}
+.dataBox{
+    text-align:center;
+    display: flex;
+    flex-wrap: wrap;
+    float: left;
+    width: 22%;
+    height: 16rem;
+    margin: 2.5rem;
+    margin-right: 0;
+    border-radius: 10px;
+    padding: 15px;
+
+}
+
+h1,h3,p,button{
+    background-color: #fff;
+    text-align: center;
+}
+
+.block{
+    display: block;
+    width: 100%;
+}
+
+.block p{
+    color: gray;
+    margin-top: 5px;
+}
+
+.btn{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dwn_btn{
+    display: inline-block;
+    width: 15rem;
+    height: 3rem;
+    border: 2px solid #1DA1F2;
     color: #1DA1F2;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dwn_btn:hover{
+    color: #fff;
+    background-color: #1DA1F2;
+    border-color: #fff;
 }
