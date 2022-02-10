@@ -1,0 +1,26 @@
+.react-tabs__tab--selected{
+    border-bottom: 2px solid #1DA1F2;
+}
+
+.react-tabs__tab:hover{
+    border-bottom: 2px solid #1DA1F2;
+    cursor: pointer;
+}
+
+.react-tabs__tab--disabled {
+    color: gray;
+    cursor: text !important;
+}
+
+.react-tabs__tab--disabled:hover{
+    border-bottom: 0px;
+}
+
+@media all and (max-width: 1150px){
+    .react-tabs__tab {
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+
