@@ -59,7 +59,7 @@ const cards = () => {
       <div className={classes.cardBox}>
           {cardData.map((data) =>{
               return(
-                  <div className={classes.dataBox}>
+                  <div className={classes.dataBox} key={data.id}>
                       <div className={classes.block}>
                           <h1>{data.name}</h1>
                       </div>

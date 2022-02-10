@@ -55,3 +55,67 @@ h1,h3,p,button{
     background-color: #1DA1F2;
     border-color: #fff;
 }
+
+@media all and (max-width: 1364px){
+    .dataBox{
+        width: 25%;
+        margin-left: 5rem;
+    }
+}
+
+@media all and (max-width: 1100px){
+    .dwn_btn{
+        width: 13rem;
+    }
+
+    .dataBox{
+        margin-left: 4rem;
+    }
+}
+
+@media all and (max-width: 970px){
+    .dataBox{
+        width: 35%;
+        margin-left: 6rem;
+    }
+
+    .dwn_btn{
+        width: 15rem;
+    }
+}
+
+@media all and (max-width: 792px){
+
+    .dataBox{
+        margin-left: 5rem;
+    }
+    .dwn_btn{
+        width: 13rem;
+    }
+}
+
+@media all and (max-width: 690px){
+    .dataBox{
+        margin-left: 4rem;
+    }
+
+    .dwn_btn{
+        width: 11rem;
+    }
+}
+
+
+@media all and (max-width: 600px){
+    .dataBox{
+        width: 70%;
+        margin-left: 5rem;
+    }
+
+}
+
+@media all and (max-width: 500px){
+    .dataBox{
+        margin-left: 4.5rem;
+    }
+
+}
