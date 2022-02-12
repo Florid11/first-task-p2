@@ -1,5 +1,6 @@
 import React from "react";
 import ToggleState from "../ToggleTopics/Toggle";
+import "./Topics.css"
 
 const Topic = () => {
     const topics =[
@@ -25,10 +26,14 @@ const Topic = () => {
         },
         ]
   return(
-    <div>
-        {topics.map((topic =>
-        <ToggleState key={topic.key} title={topic.title} paragraphs={topic.paragraphs} />
-        ))}
+    <div className='.topic'>
+        <h1>About us</h1>
+        <div>
+            {topics.map((topic =>
+                    <ToggleState key={topic.key} title={topic.title} paragraphs={topic.paragraphs} />
+            ))}
+        </div>
+
     </div>
   );
 }
