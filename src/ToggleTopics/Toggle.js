@@ -1,5 +1,6 @@
 import React,{useState} from "react";
 import { FaAngleRight } from "react-icons/fa";
+import classes from "./Toggle.module.css";
 
 
 const ToggleState = (props) => {
@@ -10,8 +11,13 @@ const ToggleState = (props) => {
     }
 
   return(
-    <div>
-        <button onClick={toggler}><FaAngleRight /></button>
+    <div className={classes.boxtopic}>
+        <div>
+            <div>
+
+            </div>
+        </div>
+
     </div>
   );
 }
