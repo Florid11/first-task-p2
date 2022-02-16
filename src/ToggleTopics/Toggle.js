@@ -1,11 +1,26 @@
 import React,{useState} from "react";
 import { FaAngleRight , FaRegUserCircle } from "react-icons/fa";
-import classes from "./Toggle.module.css";
+import "./Toggle.css";
+import { IconContext } from "react-icons";
 
 
-const ToggleState = (props) => {
+
+const ToggleState = () => {
     const [toggle, setToggle] = useState(false);
     const [pToggle, setPToggle] = useState(false);
+    const [btnToggle, setBtnToggle] = useState(false);
+    const [btnSToggle, setSBtnToggle] = useState(false);
+
+    const ToggleSwitch = () => {
+        setToggle(!toggle);
+      btnToggle ? setBtnToggle(false) : setBtnToggle(true);
+    }
+
+    const ToggleSSwitch = () => {
+        setPToggle(!pToggle);
+        btnSToggle ? setSBtnToggle(false) : setSBtnToggle(true);
+    }
+
     const topics =[
         {
             key: '1',
@@ -30,28 +45,28 @@ const ToggleState = (props) => {
     ]
 
   return(
-    <div className={classes.boxtopic}>
-        <div className={classes.about}>
-            <div>
-                <p className={classes.user}><FaRegUserCircle /></p>
+    <div className="boxTopic">
+            <div className="user">
+                <p><IconContext.Provider value={{className: "userIcon"}}><FaRegUserCircle /></IconContext.Provider></p>
             </div>
-            <div>
+            <div className="about">
                 <h1>About Us</h1>
                 <p>4 articles in this Topic</p>
             </div>
-            <button onClick={()=>setToggle(!toggle)}><FaAngleRight /></button>
-            {
-                toggle ? (topics.map(topic =>{
-                    return(
-                        <div>
-                            {topic.title}
-                            <button onClick={()=>setPToggle(!pToggle)}><FaAngleRight /></button>
-                            {pToggle ? topic.paragraphs : null}
-                        </div>
-                    )
-                })) : null
-            }
-        </div>
+            <div className="button">
+                <button onClick={ToggleSwitch} className={btnToggle ? "btnClicked" : "btn"}><FaAngleRight /></button>
+                {
+                    toggle ? (topics.map(topic =>{
+                        return(
+                            <div>
+                                {topic.title}
+                                <button onClick={ToggleSSwitch} className={btnSToggle ? "btnClicked" : "btn"}><FaAngleRight /></button>
+                                {pToggle ? topic.paragraphs : null}
+                            </div>
+                        )
+                    })) : null
+                }
+            </div>
 
     </div>
   );

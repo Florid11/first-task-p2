@@ -1,0 +1,54 @@
+.boxTopic{
+    display: block;
+    float: left;
+    width: 80%;
+    margin-bottom: 1rem;
+    margin-left: 10%;
+    background-color: white;
+    height: 6rem;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.boxTopic div{
+    border: 1px solid black;
+    float: left;
+}
+
+.user{
+    display: block;
+    width: 7rem;
+    height: 5rem;
+    margin: 8px;
+    float: left;
+    background-color: white;
+}
+
+.userIcon{
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    color: #1DA1F2;
+    margin-top: 5px;
+    background-color: white;
+}
+
+.about{
+   display: inline-block;
+    border: 3px solid black;
+}
+
+
+.btn, .btnClicked{
+    display: inline-block;
+    border: none;
+    background-color: Transparent;
+    font-size: 20px;
+    margin-top: 10px;
+    float: right;
+}
+
+.btnClicked{
+    transform: rotate(90deg);
+}
+
