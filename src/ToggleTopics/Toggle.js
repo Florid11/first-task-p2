@@ -54,16 +54,16 @@ const ToggleState = () => {
                 <p>4 articles in this Topic</p>
             </div>
             <div className="button">
-                <button onClick={ToggleSwitch} className={btnToggle ? "btnClicked" : "btn"}><FaAngleRight /></button>
+                <button onClick={ToggleSwitch} className={btnToggle ? "btnClicked" : "btn"} ><FaAngleRight /></button>
                 <div className="topic">
 
                     {
                         toggle ? (topics.map(topic =>{
                             return(
-                                <div className="topics">
+                                <div className="topics" id={topic.key}>
                                     {topic.title}
-                                    <button onClick={ToggleSSwitch} className={btnSToggle ? "btnClicked" : "btn"}><FaAngleRight /></button>
-                                    {pToggle ? topic.paragraphs : null}
+                                    <button onClick={ToggleSSwitch} className={btnSToggle ? "btnSClicked" : "btnS"} ><FaAngleRight /></button>
+                                    <p>{pToggle ? topic.paragraphs : null}</p>
                                 </div>
                             )
                         })) : null

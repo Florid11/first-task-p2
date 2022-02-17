@@ -2,13 +2,16 @@
     display: block;
     float: left;
     width: 80%;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     margin-left: 10%;
     height: 6rem;
-    border: 1px solid gray;
     background-color: white;
+    border: 1px solid gray;
 }
 
+.boxTopic div{
+    background-color: white;
+}
 
 .user{
     display: block;
@@ -16,7 +19,6 @@
     height: 5rem;
     margin: 8px;
     float: left;
-    background-color: white;
 }
 
 .userIcon{
@@ -31,7 +33,6 @@
 .about{
     display: block;
     margin-top: 15px;
-    background-color: white;
     float: left;
 }
 
@@ -44,40 +45,53 @@
 .btn, .btnClicked{
     display: block;
     border: none;
-    background-color: white;
     font-size: 25px;
     margin-top: 2rem;
     margin-right: 1rem;
     float: right;
+    cursor: pointer;
 }
 
 .btnClicked{
     transform: rotate(90deg);
 }
 
+.btnS, .btnSClicked{
+    display: inline-block;
+    float: right;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.btnSClicked{
+    transform: rotate(90deg);
+}
+
 .topic{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    flex-direction: column;
-    border: 1px solid gray;
+    display: block;
     margin-bottom: 1rem;
-
+    float: left;
+    width: 100%;
 }
 
-.topic:first-child{
-    border-top: none ;
-}
 
 .topics{
-    display: inline-block;
+    display: block;
     background-color: white;
-    border-bottom: 1px solid gray;
     padding: 5px;
-
+    border: 1px solid gray;
+    width: 100%;
+    border-top: none;
+    padding: 10px;
 }
 
-.topic:last-child{
-    border-bottom: none;
+.topic p{
+    display: inline-block;
+    margin-top: 15px;
+    text-align: left;
+    color: grey;
 }
+
 
