@@ -4,16 +4,11 @@
     width: 80%;
     margin-bottom: 1rem;
     margin-left: 10%;
-    background-color: white;
     height: 6rem;
     border: 1px solid gray;
-    border-radius: 5px;
+    background-color: white;
 }
 
-.boxTopic div{
-    border: 1px solid black;
-    float: left;
-}
 
 .user{
     display: block;
@@ -34,21 +29,55 @@
 }
 
 .about{
-   display: inline-block;
-    border: 3px solid black;
+    display: block;
+    margin-top: 15px;
+    background-color: white;
+    float: left;
+}
+
+.about p{
+    margin-top: 5px;
+    color: gray;
 }
 
 
 .btn, .btnClicked{
-    display: inline-block;
+    display: block;
     border: none;
-    background-color: Transparent;
-    font-size: 20px;
-    margin-top: 10px;
+    background-color: white;
+    font-size: 25px;
+    margin-top: 2rem;
+    margin-right: 1rem;
     float: right;
 }
 
 .btnClicked{
     transform: rotate(90deg);
+}
+
+.topic{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    flex-direction: column;
+    border: 1px solid gray;
+    margin-bottom: 1rem;
+
+}
+
+.topic:first-child{
+    border-top: none ;
+}
+
+.topics{
+    display: inline-block;
+    background-color: white;
+    border-bottom: 1px solid gray;
+    padding: 5px;
+
+}
+
+.topic:last-child{
+    border-bottom: none;
 }
 

@@ -55,18 +55,22 @@ const ToggleState = () => {
             </div>
             <div className="button">
                 <button onClick={ToggleSwitch} className={btnToggle ? "btnClicked" : "btn"}><FaAngleRight /></button>
-                {
-                    toggle ? (topics.map(topic =>{
-                        return(
-                            <div>
-                                {topic.title}
-                                <button onClick={ToggleSSwitch} className={btnSToggle ? "btnClicked" : "btn"}><FaAngleRight /></button>
-                                {pToggle ? topic.paragraphs : null}
-                            </div>
-                        )
-                    })) : null
-                }
+                <div className="topic">
+
+                    {
+                        toggle ? (topics.map(topic =>{
+                            return(
+                                <div className="topics">
+                                    {topic.title}
+                                    <button onClick={ToggleSSwitch} className={btnSToggle ? "btnClicked" : "btn"}><FaAngleRight /></button>
+                                    {pToggle ? topic.paragraphs : null}
+                                </div>
+                            )
+                        })) : null
+                    }
+                </div>
             </div>
+
 
     </div>
   );
