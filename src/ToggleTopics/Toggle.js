@@ -32,7 +32,7 @@ const ToggleState = (props) => {
       )
     }
 
-<<<<<<< HEAD
+
     const topics =[
         {
             key: '1',
