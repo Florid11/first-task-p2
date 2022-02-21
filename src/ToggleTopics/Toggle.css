@@ -88,7 +88,7 @@
 }
 
 .topic p{
-    display: inline-block;
+    display: block;
     margin-top: 15px;
     text-align: left;
     color: grey;
