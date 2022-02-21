@@ -63,6 +63,7 @@
     font-size: 15px;
     cursor: pointer;
     margin-right: 10px;
+    margin-top: -15px;
 }
 
 .btnSClicked{
@@ -87,11 +88,17 @@
     padding: 10px;
 }
 
-.topic p{
+.topics h5{
+    background-color: white;
+    width: 95%;
+}
+
+.topics p{
     display: block;
     margin-top: 15px;
     text-align: left;
     color: grey;
+    width: 95%;
 }
 
 
