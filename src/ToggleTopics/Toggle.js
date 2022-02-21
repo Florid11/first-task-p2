@@ -7,18 +7,21 @@ import { IconContext } from "react-icons";
 
 const ToggleState = () => {
     const [toggle, setToggle] = useState(false);
-    const [pToggle, setPToggle] = useState(false);
     const [btnToggle, setBtnToggle] = useState(false);
+    const [pToggle, setPToggle] = useState(false);
     const [btnSToggle, setSBtnToggle] = useState(false);
+
+
 
     const ToggleSwitch = () => {
         setToggle(!toggle);
       btnToggle ? setBtnToggle(false) : setBtnToggle(true);
     }
 
-    const ToggleSSwitch = () => {
-        setPToggle(!pToggle);
-        btnSToggle ? setSBtnToggle(false) : setSBtnToggle(true);
+    const ToggleSSwitch = (key) => {
+            setPToggle(!pToggle);
+            btnSToggle ? setSBtnToggle(false) : setSBtnToggle(true);
+
     }
 
     const topics =[
@@ -62,8 +65,14 @@ const ToggleState = () => {
                             return(
                                 <div className="topics" id={topic.key}>
                                     {topic.title}
+<<<<<<< HEAD
                                     <button onClick={ToggleSSwitch} className={btnSToggle ? "btnSClicked" : "btnS"} ><FaAngleRight /></button>
                                     <p>{pToggle ? topic.paragraphs1 : null}</p>
+=======
+                                    <button key={topic.key} onClick={ToggleSSwitch} className={btnSToggle ? "btnSClicked" : "btnS"} ><FaAngleRight /></button>
+
+                                    <p>{ pToggle ? topic.paragraphs : null}</p>
+>>>>>>> toggle
                                 </div>
                             )
                         })) : null
