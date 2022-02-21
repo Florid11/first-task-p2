@@ -90,7 +90,7 @@
 
 .topics h5{
     background-color: white;
-    width: 95%;
+    width: 90%;
 }
 
 .topics p{
@@ -101,4 +101,57 @@
     width: 95%;
 }
 
+@media all and (max-width: 404px){
+    .boxTopic{
+        height: 8rem;
+    }
 
+    .topic{
+        margin-top: 2rem;
+    }
+    .userIcon{
+        width: 50px;
+        height: 50px;
+        margin-top: 17px;
+        margin-left: -55px;
+    }
+
+    .about{
+        margin-left: -55px;
+    }
+
+    .btn,.btnClicked{
+        font-size: 20px;
+
+    }
+
+}
+
+@media all and (max-width: 328px){
+    .btn,.btnClicked{
+        float: unset;
+        margin-top: 5rem;
+        margin-bottom: -1rem;
+    }
+}
+
+@media all and (max-width: 284px){
+    .userIcon{
+        width: 40px;
+        height: 40px;
+        margin-top: 17px;
+        margin-left: -75px;
+    }
+
+    .about{
+        margin-left: -75px;
+    }
+
+    .about h1{
+        font-size: 25px;
+    }
+
+    .about p{
+        font-size: 14px;
+    }
+}
