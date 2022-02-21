@@ -2,50 +2,35 @@ import React,{useState} from "react";
 import { FaAngleRight , FaRegUserCircle } from "react-icons/fa";
 import "./Toggle.css";
 import { IconContext } from "react-icons";
+import {DataToggle} from "./ToggleData";
 
 
 
-const ToggleState = () => {
+const ToggleState = (props) => {
     const [toggle, setToggle] = useState(false);
     const [btnToggle, setBtnToggle] = useState(false);
-    const [pToggle, setPToggle] = useState(false);
-    const [btnSToggle, setSBtnToggle] = useState(false);
-
-
 
     const ToggleSwitch = () => {
         setToggle(!toggle);
       btnToggle ? setBtnToggle(false) : setBtnToggle(true);
     }
 
-    const ToggleSSwitch = (key) => {
-            setPToggle(!pToggle);
-            btnSToggle ? setSBtnToggle(false) : setSBtnToggle(true);
+    const Data = (props) => {
+        const [showData, setShowData] = useState(false);
+        function show(){
+            setShowData(!showData)
+        };
 
+      return(
+          <div className='topics'>
+            <h5>{props.title}</h5>
+              <button onClick={() => setShowData(!showData)} className={showData ? "btnSClicked" : "btnS"} ><FaAngleRight /></button>
+              <div>
+                  <p>{showData ? props.paragraphs : null}</p>
+              </div>
+          </div>
+      )
     }
-
-    const topics =[
-        {
-            key: '1',
-            title: 'How does ParkName seperate itself from other domain name parking companies?',
-            paragraphs: 'Your domains are a valuable online property. As in any investment, you want the most efficient, easy way to make sure your property is going to be profitable. Do you own more than 1,000 domains? As a professional domainer, you will find everything you need through Parkname to generate maximum profits from your domain portfolio.'
-        },
-        {
-            key: '2',
-            title: 'Is ParkName Parking actually free?',
-            paragraphs: 'Your domains are a valuable online property. As in any investment, you want the most efficient, easy way to make sure your property is going to be profitable. Do you own more than 1,000 domains? As a professional domainer, you will find everything you need through Parkname to generate maximum profits from your domain portfolio.'
-        },
-        {
-            key: '3',
-            title: 'What you do?',
-            paragraphs: 'Your domains are a valuable online property. As in any investment, you want the most efficient, easy way to make sure your property is going to be profitable. Do you own more than 1,000 domains? As a professional domainer, you will find everything you need through Parkname to generate maximum profits from your domain portfolio.'
-        },
-        {
-            key: '4',
-            title: 'When was Parkname first founded?',
-            paragraphs: 'Your domains are a valuable online property. As in any investment, you want the most efficient, easy way to make sure your property is going to be profitable. Do you own more than 1,000 domains? As a professional domainer, you will find everything you need through Parkname to generate maximum profits from your domain portfolio.'
-        },
-    ]
 
   return(
     <div className="boxTopic">
@@ -59,19 +44,13 @@ const ToggleState = () => {
             <div className="button">
                 <button onClick={ToggleSwitch} className={btnToggle ? "btnClicked" : "btn"} ><FaAngleRight /></button>
                 <div className="topic">
-
                     {
-                        toggle ? (topics.map(topic =>{
+                        toggle ? DataToggle.map((props) =>{
                             return(
-                                <div className="topics" id={topic.key}>
-                                    {topic.title}
-                                    <button key={topic.key} onClick={ToggleSSwitch} className={btnSToggle ? "btnSClicked" : "btnS"} ><FaAngleRight /></button>
-
-                                    <p>{ pToggle ? topic.paragraphs : null}</p>
-                                </div>
-                            )
-                        })) : null
+                            <Data key={props.key} title={props.title} paragraphs={props.paragraphs} />
+                        )}) : null
                     }
+
                 </div>
             </div>
 
