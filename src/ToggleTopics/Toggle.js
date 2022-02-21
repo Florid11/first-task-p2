@@ -17,9 +17,6 @@ const ToggleState = (props) => {
 
     const Data = (props) => {
         const [showData, setShowData] = useState(false);
-        function show(){
-            setShowData(!showData)
-        };
 
       return(
           <div className='topics'>
@@ -32,32 +29,6 @@ const ToggleState = (props) => {
       )
     }
 
-
-    const topics =[
-        {
-            key: '1',
-            title: 'How does ParkName seperate itself from other domain name parking companies?',
-            paragraphs1: 'Your domains are a valuable online property. As in any investment, you want the most efficient, easy way to make sure your property is going to be profitable. Do you own more than 1,000 domains? As a professional domainer, you will find everything you need through Parkname to generate maximum profits from your domain portfolio.'
-        },
-        {
-            key: '2',
-            title: 'Is ParkName Parking actually free?',
-            paragraphs2: 'Your domains are a valuable online property. As in any investment, you want the most efficient, easy way to make sure your property is going to be profitable. Do you own more than 1,000 domains? As a professional domainer, you will find everything you need through Parkname to generate maximum profits from your domain portfolio.'
-        },
-        {
-            key: '3',
-            title: 'What you do?',
-            paragraphs3: 'Your domains are a valuable online property. As in any investment, you want the most efficient, easy way to make sure your property is going to be profitable. Do you own more than 1,000 domains? As a professional domainer, you will find everything you need through Parkname to generate maximum profits from your domain portfolio.'
-        },
-        {
-            key: '4',
-            title: 'When was Parkname first founded?',
-            paragraphs4: 'Your domains are a valuable online property. As in any investment, you want the most efficient, easy way to make sure your property is going to be profitable. Do you own more than 1,000 domains? As a professional domainer, you will find everything you need through Parkname to generate maximum profits from your domain portfolio.'
-        },
-    ]
-
-=======
->>>>>>> toggle
   return(
     <div className="boxTopic">
             <div className="user">
@@ -73,26 +44,9 @@ const ToggleState = (props) => {
                     {
                         toggle ? DataToggle.map((props) =>{
                             return(
-<<<<<<< HEAD
-                                <div className="topics" id={topic.key}>
-                                    {topic.title}
-<<<<<<< HEAD
-                                    <button onClick={ToggleSSwitch} className={btnSToggle ? "btnSClicked" : "btnS"} ><FaAngleRight /></button>
-                                    <p>{pToggle ? topic.paragraphs1 : null}</p>
-=======
-                                    <button key={topic.key} onClick={ToggleSSwitch} className={btnSToggle ? "btnSClicked" : "btnS"} ><FaAngleRight /></button>
-
-                                    <p>{ pToggle ? topic.paragraphs : null}</p>
->>>>>>> toggle
-                                </div>
-                            )
-                        })) : null
-=======
-                            <Data key={props.key} title={props.title} paragraphs={props.paragraphs} />
-                        )}) : null
->>>>>>> toggle
+                                <Data key={props.key} title={props.title} paragraphs={props.paragraphs}/>
+                            )}):null
                     }
-
                 </div>
             </div>
 
