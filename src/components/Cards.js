@@ -53,11 +53,21 @@ const cards = () => {
             price: '$26.33/yr',
             description: 'Instead of $29.99/yr'
         },
-
     ];
+
+    function shuffleArray(data) {
+        for (let i = data.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            const temp = data[i];
+            data[i] = data[j];
+            data[j] = temp;
+        }
+        return data;
+    }
+
   return(
       <div className={classes.cardBox}>
-          {cardData.map((data) =>{
+          {shuffleArray(cardData).map((data) =>{
               return(
                   <div className={classes.dataBox} key={data.id}>
                       <div className={classes.block}>
