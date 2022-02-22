@@ -11,37 +11,37 @@ const tabsComponent = () => {
               <Tabs>
                   <TabList className={classes.tab_btn}>
                       <Tab >Domains</Tab>
-                      <Tab disabled >Web Hosting</Tab>
-                      <Tab disabled >Dedicated Servers</Tab>
-                      <Tab disabled >Virtual Cloud Servers</Tab>
-                      <Tab disabled >WordPress Hosting</Tab>
-                      <Tab disabled >Email Hosting</Tab>
-                      <Tab disabled >VPS Hosting Servers</Tab>
-                      <Tab disabled >Free Hosting</Tab>
+                      <Tab >Web Hosting</Tab>
+                      <Tab >Dedicated Servers</Tab>
+                      <Tab >Virtual Cloud Servers</Tab>
+                      <Tab >WordPress Hosting</Tab>
+                      <Tab >Email Hosting</Tab>
+                      <Tab >VPS Hosting Servers</Tab>
+                      <Tab >Free Hosting</Tab>
                   </TabList>
                   <TabPanel className={classes.panel}>
                       {cards()}
                   </TabPanel>
                   <TabPanel className={classes.panel}>
-                      <h1>Hello</h1>
+                      {cards()}
                   </TabPanel>
                   <TabPanel className={classes.panel}>
-                      <h1>Hello</h1>
+                      {cards()}
                   </TabPanel>
                   <TabPanel className={classes.panel}>
-                      <h1>Hello</h1>
+                      {cards()}
                   </TabPanel>
                   <TabPanel className={classes.panel}>
-                      <h1>Hello</h1>
+                      {cards()}
                   </TabPanel>
                   <TabPanel className={classes.panel}>
-                      <h1>Hello</h1>
+                      {cards()}
                   </TabPanel>
                   <TabPanel className={classes.panel}>
-                      <h1>Hello</h1>
+                      {cards()}
                   </TabPanel>
                   <TabPanel className={classes.panel}>
-                      <h1>Hello</h1>
+                      {cards()}
                   </TabPanel>
               </Tabs>
           </div>
